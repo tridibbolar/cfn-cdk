@@ -1,0 +1,288 @@
+Parameters:
+  LabEventTableNameParam:
+    Type: String
+    Default: lab-event-records
+  LabEventQueueNameParam:
+    Type: String
+    Default: lab-event-queue
+  LabEventBucketNameParam:
+    Type: String
+    Default: lab-lambda-code-bucket
+  LabEventESNameParam:
+    Type: String
+    Default: lab-logs-domain
+Resources:
+  LabEventQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName:
+        Ref: LabEventQueueNameParam
+    Metadata:
+      aws:cdk:path: labEventsApiStack/LabEventQueue
+  LabEventTableName:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      KeySchema:
+        - AttributeName: pk
+          KeyType: HASH
+        - AttributeName: sk
+          KeyType: RANGE
+      AttributeDefinitions:
+        - AttributeName: pk
+          AttributeType: S
+        - AttributeName: sk
+          AttributeType: S
+      BillingMode: PAY_PER_REQUEST
+      TableName:
+        Ref: LabEventTableNameParam
+    DependsOn:
+      - LabEventQueue
+    Metadata:
+      aws:cdk:path: labEventsApiStack/LabEventTableName
+  Role1ABCC5F0:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+        Version: "2012-10-17"
+      Description: Role to access dynamodb from lambda
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+      Policies:
+        - PolicyDocument:
+            Statement:
+              - Action: dynamodb:*
+                Effect: Allow
+                Resource:
+                  Fn::GetAtt:
+                    - LabEventTableName
+                    - Arn
+              - Action: sqs:*
+                Effect: Allow
+                Resource:
+                  Fn::GetAtt:
+                    - LabEventQueue
+                    - Arn
+              - Action: es:*
+                Effect: Allow
+                Resource: arn:aws:es:*:*:*
+              - Action: logs:*
+                Effect: Allow
+                Resource: arn:aws:logs:*:*:*
+              - Action:
+                  - ec2:CreateNetworkInterface
+                  - ec2:DescribeNetworkInterfaces
+                  - ec2:DeleteNetworkInterface
+                Effect: Allow
+                Resource: arn:aws:ec2:*:*:*
+            Version: "2012-10-17"
+          PolicyName: logs-and-ec2-permissions
+      RoleName: lab-lambda-dynamodb-role
+    Metadata:
+      aws:cdk:path: labEventsApiStack/Role/Resource
+  LabEventLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      Code:
+        S3Bucket:
+          Ref: LabEventBucketNameParam
+        S3Key: lab-write-events.zip
+      Handler: index.handler
+      Role:
+        Fn::GetAtt:
+          - Role1ABCC5F0
+          - Arn
+      Runtime: nodejs12.x
+      Environment:
+        Variables:
+          TABLE_NAME:
+            Ref: LabEventTableNameParam
+      FunctionName: lab-write-events
+    DependsOn:
+      - LabEventTableName
+    Metadata:
+      aws:cdk:path: labEventsApiStack/LabEventLambda
+  labEventFnLabEventQueue:
+    Type: AWS::Lambda::EventSourceMapping
+    Properties:
+      EventSourceArn:
+        Fn::GetAtt:
+          - LabEventQueue
+          - Arn
+      FunctionName:
+        Fn::GetAtt:
+          - LabEventLambda
+          - Arn
+      Enabled: true
+    Metadata:
+      aws:cdk:path: labEventsApiStack/labEventFnLabEventQueue
+  labDomain:
+    Type: AWS::Elasticsearch::Domain
+    Properties:
+      AccessPolicies:
+        Statement:
+          - Action: es:*
+            Effect: Allow
+            Principal: "*"
+            Resource:
+              Fn::Join:
+                - ""
+                - - arn:aws:es:ap-southeast-1:086272791573:domain/
+                  - Ref: LabEventESNameParam
+                  - /*
+        Version: "2012-10-17"
+      DomainName:
+        Ref: LabEventESNameParam
+      EBSOptions:
+        EBSEnabled: true
+        VolumeSize: 10
+        VolumeType: gp2
+      ElasticsearchClusterConfig:
+        DedicatedMasterEnabled: false
+        InstanceCount: 1
+        InstanceType: r5.large.elasticsearch
+      ElasticsearchVersion: "7.4"
+      EncryptionAtRestOptions:
+        Enabled: true
+        KmsKeyId: arn:aws:kms:ap-southeast-1:086272791573:key/2ef59a28-907b-403e-9888-ffdb22440c0c
+      NodeToNodeEncryptionOptions:
+        Enabled: true
+    DependsOn:
+      - LabEventTableName
+    Metadata:
+      aws:cdk:path: labEventsApiStack/labDomain
+  LabElasticSearchLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      Code:
+        S3Bucket:
+          Ref: LabEventBucketNameParam
+        S3Key: LogsToElasticsearch.zip
+      Handler: index.handler
+      Role:
+        Fn::GetAtt:
+          - Role1ABCC5F0
+          - Arn
+      Runtime: nodejs12.x
+      Environment:
+        Variables:
+          ELASTIC_SEARCH_ENDPOINT:
+            Fn::GetAtt:
+              - labDomain
+              - DomainEndpoint
+      FunctionName: lab-elastic-search-event
+    DependsOn:
+      - labDomain
+    Metadata:
+      aws:cdk:path: labEventsApiStack/LabElasticSearchLambda
+  lambdaInvokePermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:InvokeFunction
+      FunctionName:
+        Fn::GetAtt:
+          - LabElasticSearchLambda
+          - Arn
+      Principal: logs.ap-southeast-1.amazonaws.com
+      SourceAccount:
+        Ref: AWS::AccountId
+      SourceArn:
+        Fn::Join:
+          - ""
+          - - "arn:"
+            - Ref: AWS::Partition
+            - ":logs:"
+            - Ref: AWS::Region
+            - ":"
+            - Ref: AWS::AccountId
+            - :log-group:/aws/lambda/lab-write-events:*
+    Metadata:
+      aws:cdk:path: labEventsApiStack/lambdaInvokePermission
+  labSubscriptionFilter:
+    Type: AWS::Logs::SubscriptionFilter
+    Properties:
+      DestinationArn:
+        Fn::GetAtt:
+          - LabElasticSearchLambda
+          - Arn
+      FilterPattern: ""
+      LogGroupName: /aws/lambda/lab-write-events
+    DependsOn:
+      - lambdaInvokePermission
+    Metadata:
+      aws:cdk:path: labEventsApiStack/labSubscriptionFilter
+  CDKMetadata:
+    Type: AWS::CDK::Metadata
+    Properties:
+      Modules: aws-cdk=1.28.0,@aws-cdk/assets=1.28.0,@aws-cdk/aws-apigateway=1.28.0,@aws-cdk/aws-applicationautoscaling=1.28.0,@aws-cdk/aws-autoscaling=1.28.0,@aws-cdk/aws-autoscaling-common=1.28.0,@aws-cdk/aws-autoscaling-hooktargets=1.28.0,@aws-cdk/aws-batch=1.28.0,@aws-cdk/aws-certificatemanager=1.28.0,@aws-cdk/aws-cloudformation=1.28.0,@aws-cdk/aws-cloudfront=1.28.0,@aws-cdk/aws-cloudwatch=1.28.0,@aws-cdk/aws-dynamodb=1.28.0,@aws-cdk/aws-ec2=1.28.0,@aws-cdk/aws-ecr=1.28.0,@aws-cdk/aws-ecr-assets=1.28.0,@aws-cdk/aws-ecs=1.28.0,@aws-cdk/aws-elasticloadbalancing=1.28.0,@aws-cdk/aws-elasticloadbalancingv2=1.28.0,@aws-cdk/aws-elasticsearch=1.28.0,@aws-cdk/aws-events=1.28.0,@aws-cdk/aws-glue=1.28.0,@aws-cdk/aws-iam=1.28.0,@aws-cdk/aws-kms=1.28.0,@aws-cdk/aws-lambda=1.28.0,@aws-cdk/aws-logs=1.28.0,@aws-cdk/aws-route53=1.28.0,@aws-cdk/aws-route53-targets=1.28.0,@aws-cdk/aws-s3=1.28.0,@aws-cdk/aws-s3-assets=1.28.0,@aws-cdk/aws-sam=1.28.0,@aws-cdk/aws-secretsmanager=1.28.0,@aws-cdk/aws-servicediscovery=1.28.0,@aws-cdk/aws-sns=1.28.0,@aws-cdk/aws-sns-subscriptions=1.28.0,@aws-cdk/aws-sqs=1.28.0,@aws-cdk/aws-ssm=1.28.0,@aws-cdk/aws-stepfunctions=1.28.0,@aws-cdk/aws-stepfunctions-tasks=1.28.0,@aws-cdk/core=1.28.0,@aws-cdk/custom-resources=1.28.0,@aws-cdk/cx-api=1.28.0,@aws-cdk/region-info=1.28.0,jsii-runtime=Java/1.8.0_231
+    Condition: CDKMetadataAvailable
+Conditions:
+  CDKMetadataAvailable:
+    Fn::Or:
+      - Fn::Or:
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - ap-east-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - ap-northeast-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - ap-northeast-2
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - ap-south-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - ap-southeast-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - ap-southeast-2
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - ca-central-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - cn-north-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - cn-northwest-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - eu-central-1
+      - Fn::Or:
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - eu-north-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - eu-west-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - eu-west-2
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - eu-west-3
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - me-south-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - sa-east-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - us-east-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - us-east-2
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - us-west-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - us-west-2
+
