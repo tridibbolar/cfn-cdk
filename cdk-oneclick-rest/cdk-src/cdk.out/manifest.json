@@ -1,0 +1,1110 @@
+{
+  "version": "1.16.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "CodecommitStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "CodecommitStack.template.json"
+      },
+      "metadata": {
+        "/CodecommitStack/coderepositoryname": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "coderepositoryname",
+            "trace": [
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/CodecommitStack/code-repository/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "coderepository5B01BE4B",
+            "trace": [
+              "new Repository (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codecommit\\lib\\repository.js:111:27)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/CodecommitStack/HttpUrl": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HttpUrl",
+            "trace": [
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/CodecommitStack/SshUrl": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SshUrl",
+            "trace": [
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ]
+      }
+    },
+    "ECRStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "ECRStack.template.json"
+      },
+      "metadata": {
+        "/ECRStack/ecrrepositoryname": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ecrrepositoryname",
+            "trace": [
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/ECRStack/ecr-repository/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ecrrepository892B51BD",
+            "trace": [
+              "new Repository (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecr\\lib\\repository.js:155:26)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/ECRStack/repository-name": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "repositoryname",
+            "trace": [
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/ECRStack/repository-arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "repositoryarn",
+            "trace": [
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/ECRStack/repository-uri": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "repositoryuri",
+            "trace": [
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ]
+      }
+    },
+    "CodepipelineStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "CodepipelineStack.template.json"
+      },
+      "metadata": {
+        "/CodepipelineStack/coderepositoryname": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "coderepositoryname",
+            "trace": [
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/CodepipelineStack/OneClickRepo/CodepipelineStackOneClickPipeline31CF7614EventRule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OneClickRepoCodepipelineStackOneClickPipeline31CF7614EventRule3CC0E7BB",
+            "trace": [
+              "new Rule (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-events\\lib\\rule.js:25:26)",
+              "Import.onEvent (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codecommit\\lib\\repository.js:21:22)",
+              "Import.onStateChange (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codecommit\\lib\\repository.js:34:27)",
+              "Import.onReferenceUpdated (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codecommit\\lib\\repository.js:54:27)",
+              "Import.onCommit (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codecommit\\lib\\repository.js:95:27)",
+              "CodeCommitSourceAction.bound (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline-actions\\lib\\codecommit\\source-action.js:50:35)",
+              "CodeCommitSourceAction.bind (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline-actions\\lib\\action.js:23:21)",
+              "Pipeline._attachActionToPipeline (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\pipeline.js:210:41)",
+              "Stage.attachActionToPipeline (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\stage.js:108:31)",
+              "Stage.addAction (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\stage.js:67:33)",
+              "new Stage (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\stage.js:25:18)",
+              "Pipeline.addStage (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\pipeline.js:160:23)",
+              "new Pipeline (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\pipeline.js:129:18)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/CodepipelineStack/DockerBuild/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DockerBuildRole2BAC6ED2",
+            "trace": [
+              "new Role (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:35:22)",
+              "new Project (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codebuild\\lib\\project.js:238:35)",
+              "new PipelineProject (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codebuild\\lib\\pipeline-project.js:11:9)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/CodepipelineStack/DockerBuild/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DockerBuildRoleDefaultPolicy0D649F98",
+            "trace": [
+              "new Policy (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.js:30:26)",
+              "Role.addToPolicy (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:153:34)",
+              "PipelineProject.addToRolePolicy (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codebuild\\lib\\project.js:46:23)",
+              "new Project (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codebuild\\lib\\project.js:302:14)",
+              "new PipelineProject (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codebuild\\lib\\pipeline-project.js:11:9)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/CodepipelineStack/DockerBuild/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DockerBuildCFACF599",
+            "trace": [
+              "new Project (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codebuild\\lib\\project.js:275:26)",
+              "new PipelineProject (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codebuild\\lib\\pipeline-project.js:11:9)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/CodepipelineStack/OneClickPipeline/ArtifactsBucketEncryptionKey/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OneClickPipelineArtifactsBucketEncryptionKey956C032C",
+            "trace": [
+              "new Key (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-kms\\lib\\key.js:145:26)",
+              "new Pipeline (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\pipeline.js:80:35)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/CodepipelineStack/OneClickPipeline/ArtifactsBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OneClickPipelineArtifactsBucketEA14E963",
+            "trace": [
+              "new Bucket (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-s3\\lib\\bucket.js:366:26)",
+              "new Pipeline (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\pipeline.js:85:27)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/CodepipelineStack/OneClickPipeline/ArtifactsBucketEncryptionKeyAlias/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OneClickPipelineArtifactsBucketEncryptionKeyAliasC59FA79E",
+            "trace": [
+              "new Alias (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-kms\\lib\\alias.js:69:26)",
+              "new Pipeline (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\pipeline.js:92:13)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/CodepipelineStack/OneClickPipeline/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OneClickPipelineRole88CAF300",
+            "trace": [
+              "new Role (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:35:22)",
+              "new Pipeline (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\pipeline.js:100:35)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/CodepipelineStack/OneClickPipeline/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OneClickPipelineRoleDefaultPolicy5846C256",
+            "trace": [
+              "new Policy (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.js:30:26)",
+              "Role.addToPolicy (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:153:34)",
+              "Function.addToPrincipal (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.js:57:65)",
+              "Function.addToPrincipalOrResource (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.js:31:30)",
+              "Bucket.grant (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-s3\\lib\\bucket.js:275:29)",
+              "Bucket.grantReadWrite (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-s3\\lib\\bucket.js:224:21)",
+              "new Pipeline (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\pipeline.js:113:29)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/CodepipelineStack/OneClickPipeline/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OneClickPipeline07451021",
+            "trace": [
+              "new Pipeline (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\pipeline.js:103:30)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/CodepipelineStack/OneClickPipeline/OneClickSource/Source/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OneClickPipelineOneClickSourceCodePipelineActionRole7C06F5AF",
+            "trace": [
+              "new Role (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:35:22)",
+              "Pipeline.getRoleForAction (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\pipeline.js:348:26)",
+              "Pipeline._attachActionToPipeline (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\pipeline.js:208:33)",
+              "Stage.attachActionToPipeline (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\stage.js:108:31)",
+              "Stage.addAction (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\stage.js:67:33)",
+              "new Stage (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\stage.js:25:18)",
+              "Pipeline.addStage (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\pipeline.js:160:23)",
+              "new Pipeline (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\pipeline.js:129:18)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/CodepipelineStack/OneClickPipeline/OneClickSource/Source/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OneClickPipelineOneClickSourceCodePipelineActionRoleDefaultPolicy7C5A80DC",
+            "trace": [
+              "new Policy (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.js:30:26)",
+              "Role.addToPolicy (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:153:34)",
+              "Function.addToPrincipal (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.js:57:65)",
+              "Function.addToPrincipalOrResource (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.js:31:30)",
+              "Bucket.grant (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-s3\\lib\\bucket.js:275:29)",
+              "Bucket.grantReadWrite (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-s3\\lib\\bucket.js:224:21)",
+              "CodeCommitSourceAction.bound (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline-actions\\lib\\codecommit\\source-action.js:57:24)",
+              "CodeCommitSourceAction.bind (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline-actions\\lib\\action.js:23:21)",
+              "Pipeline._attachActionToPipeline (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\pipeline.js:210:41)",
+              "Stage.attachActionToPipeline (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\stage.js:108:31)",
+              "Stage.addAction (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\stage.js:67:33)",
+              "new Stage (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\stage.js:25:18)",
+              "Pipeline.addStage (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\pipeline.js:160:23)",
+              "new Pipeline (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\pipeline.js:129:18)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/CodepipelineStack/OneClickPipeline/EventsRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OneClickPipelineEventsRole3A776A5F",
+            "trace": [
+              "new Role (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:35:22)",
+              "Object.singletonEventRole (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-events-targets\\lib\\util.js:16:18)",
+              "CodePipeline.bind (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-events-targets\\lib\\codepipeline.js:17:52)",
+              "Rule.addTarget (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-events\\lib\\rule.js:68:36)",
+              "Import.onEvent (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codecommit\\lib\\repository.js:26:14)",
+              "Import.onStateChange (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codecommit\\lib\\repository.js:34:27)",
+              "Import.onReferenceUpdated (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codecommit\\lib\\repository.js:54:27)",
+              "Import.onCommit (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codecommit\\lib\\repository.js:95:27)",
+              "CodeCommitSourceAction.bound (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline-actions\\lib\\codecommit\\source-action.js:50:35)",
+              "CodeCommitSourceAction.bind (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline-actions\\lib\\action.js:23:21)",
+              "Pipeline._attachActionToPipeline (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\pipeline.js:210:41)",
+              "Stage.attachActionToPipeline (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\stage.js:108:31)",
+              "Stage.addAction (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\stage.js:67:33)",
+              "new Stage (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\stage.js:25:18)",
+              "Pipeline.addStage (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\pipeline.js:160:23)",
+              "new Pipeline (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\pipeline.js:129:18)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/CodepipelineStack/OneClickPipeline/EventsRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OneClickPipelineEventsRoleDefaultPolicy11B0A0D8",
+            "trace": [
+              "new Policy (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.js:30:26)",
+              "Role.addToPolicy (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:153:34)",
+              "Array.forEach (<anonymous>)",
+              "Object.singletonEventRole (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-events-targets\\lib\\util.js:19:22)",
+              "CodePipeline.bind (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-events-targets\\lib\\codepipeline.js:17:52)",
+              "Rule.addTarget (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-events\\lib\\rule.js:68:36)",
+              "Import.onEvent (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codecommit\\lib\\repository.js:26:14)",
+              "Import.onStateChange (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codecommit\\lib\\repository.js:34:27)",
+              "Import.onReferenceUpdated (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codecommit\\lib\\repository.js:54:27)",
+              "Import.onCommit (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codecommit\\lib\\repository.js:95:27)",
+              "CodeCommitSourceAction.bound (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline-actions\\lib\\codecommit\\source-action.js:50:35)",
+              "CodeCommitSourceAction.bind (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline-actions\\lib\\action.js:23:21)",
+              "Pipeline._attachActionToPipeline (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\pipeline.js:210:41)",
+              "Stage.attachActionToPipeline (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\stage.js:108:31)",
+              "Stage.addAction (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\stage.js:67:33)",
+              "new Stage (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\stage.js:25:18)",
+              "Pipeline.addStage (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\pipeline.js:160:23)",
+              "new Pipeline (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\pipeline.js:129:18)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/CodepipelineStack/OneClickPipeline/OneClickBuild/DockerBuild/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OneClickPipelineOneClickBuildDockerBuildCodePipelineActionRoleC2A0DFA4",
+            "trace": [
+              "new Role (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:35:22)",
+              "Pipeline.getRoleForAction (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\pipeline.js:348:26)",
+              "Pipeline._attachActionToPipeline (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\pipeline.js:208:33)",
+              "Stage.attachActionToPipeline (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\stage.js:108:31)",
+              "Stage.addAction (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\stage.js:67:33)",
+              "new Stage (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\stage.js:25:18)",
+              "Pipeline.addStage (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\pipeline.js:160:23)",
+              "new Pipeline (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\pipeline.js:129:18)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/CodepipelineStack/OneClickPipeline/OneClickBuild/DockerBuild/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OneClickPipelineOneClickBuildDockerBuildCodePipelineActionRoleDefaultPolicy82E5CD86",
+            "trace": [
+              "new Policy (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.js:30:26)",
+              "Role.addToPolicy (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:153:34)",
+              "CodeBuildAction.bound (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline-actions\\lib\\codebuild\\build-action.js:54:22)",
+              "CodeBuildAction.bind (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline-actions\\lib\\action.js:23:21)",
+              "Pipeline._attachActionToPipeline (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\pipeline.js:210:41)",
+              "Stage.attachActionToPipeline (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\stage.js:108:31)",
+              "Stage.addAction (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\stage.js:67:33)",
+              "new Stage (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\stage.js:25:18)",
+              "Pipeline.addStage (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\pipeline.js:160:23)",
+              "new Pipeline (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-codepipeline\\lib\\pipeline.js:129:18)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ]
+      }
+    },
+    "EcsFargateStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://086272791573/ap-southeast-1",
+      "properties": {
+        "templateFile": "EcsFargateStack.template.json"
+      },
+      "dependencies": [
+        "CodepipelineStack"
+      ],
+      "metadata": {
+        "/EcsFargateStack/ecrrepositoryname": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ecrrepositoryname",
+            "trace": [
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/EcsFargateStack/imagetag": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "imagetag",
+            "trace": [
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/EcsFargateStack/containerport": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "containerport",
+            "trace": [
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/EcsFargateStack/OneClickCluster/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OneClickClusterFC5EC522",
+            "trace": [
+              "new Cluster (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:31:25)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/EcsFargateStack/OneClickFargateService/LB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OneClickFargateServiceLB4F11BF53",
+            "trace": [
+              "new BaseLoadBalancer (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\shared\\base-load-balancer.js:23:26)",
+              "new ApplicationLoadBalancer (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-load-balancer.js:16:9)",
+              "new ApplicationLoadBalancedServiceBase (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.js:31:85)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.js:13:9)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/EcsFargateStack/OneClickFargateService/LB/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OneClickFargateServiceLBSecurityGroup457CCE32",
+            "trace": [
+              "new SecurityGroup (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.js:144:30)",
+              "new ApplicationLoadBalancer (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-load-balancer.js:21:53)",
+              "new ApplicationLoadBalancedServiceBase (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.js:31:85)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.js:13:9)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/EcsFargateStack/OneClickFargateService/LB/SecurityGroup/to EcsFargateStackOneClickFargateServiceSecurityGroupFBCDA5AF:{IndirectPort}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OneClickFargateServiceLBSecurityGrouptoEcsFargateStackOneClickFargateServiceSecurityGroupFBCDA5AFIndirectPort7F3C8953",
+            "trace": [
+              "SecurityGroup.addEgressRule (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.js:48:13)",
+              "SecurityGroup.addEgressRule (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.js:216:19)",
+              "other.connections._securityGroupRules.forEachAndForever.rule (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:66:31)",
+              "ReactiveList.forEachAndForever (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:191:13)",
+              "_securityGroups.forEachAndForever.securityGroup (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:65:51)",
+              "ReactiveList.forEachAndForever (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:191:13)",
+              "Connections.allowTo (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:64:30)",
+              "Connections.allowFrom (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:95:31)",
+              "ApplicationListener.registerConnectable (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-listener.js:212:33)",
+              "ApplicationTargetGroup.registerConnectable (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-target-group.js:75:22)",
+              "Object.attachToApplicationTargetGroup (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\base-service.js:185:29)",
+              "FargateService.attachToApplicationTargetGroup (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\base-service.js:152:47)",
+              "ApplicationTargetGroup.addTarget (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-target-group.js:52:35)",
+              "ApplicationLoadBalancedFargateService.addServiceAsTarget (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.js:90:26)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.js:62:14)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/EcsFargateStack/OneClickFargateService/LB/PublicListener/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OneClickFargateServiceLBPublicListenerC45F3B7C",
+            "trace": [
+              "new BaseListener (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\shared\\base-listener.js:12:26)",
+              "new ApplicationListener (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-listener.js:23:9)",
+              "ApplicationLoadBalancer.addListener (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-load-balancer.js:67:16)",
+              "new ApplicationLoadBalancedServiceBase (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.js:39:43)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.js:13:9)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/EcsFargateStack/OneClickFargateService/LB/PublicListener/ECSGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OneClickFargateServiceLBPublicListenerECSGroup28464895",
+            "trace": [
+              "new TargetGroupBase (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\shared\\base-target-group.js:31:25)",
+              "new ApplicationTargetGroup (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-target-group.js:15:9)",
+              "ApplicationListener.addTargets (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-listener.js:132:23)",
+              "new ApplicationLoadBalancedServiceBase (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.js:44:42)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.js:13:9)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/EcsFargateStack/OneClickFargateService/LoadBalancerDNS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OneClickFargateServiceLoadBalancerDNSA542973D",
+            "trace": [
+              "new ApplicationLoadBalancedServiceBase (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.js:74:9)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.js:13:9)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/EcsFargateStack/OneClickFargateService/ServiceURL": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OneClickFargateServiceServiceURL73DE1C7E",
+            "trace": [
+              "new ApplicationLoadBalancedServiceBase (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.js:75:9)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.js:13:9)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/EcsFargateStack/OneClickFargateService/TaskDef/TaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OneClickFargateServiceTaskDefTaskRole9CC3D8ED",
+            "trace": [
+              "new Role (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:35:22)",
+              "new TaskDefinition (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.js:63:43)",
+              "new FargateTaskDefinition (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs\\lib\\fargate\\fargate-task-definition.js:18:9)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.js:23:35)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/EcsFargateStack/OneClickFargateService/TaskDef/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OneClickFargateServiceTaskDef6C9E6397",
+            "trace": [
+              "new TaskDefinition (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.js:66:25)",
+              "new FargateTaskDefinition (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs\\lib\\fargate\\fargate-task-definition.js:18:9)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.js:23:35)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/EcsFargateStack/OneClickFargateService/TaskDef/c1/LogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OneClickFargateServiceTaskDefc1LogGroupD57C432A",
+            "trace": [
+              "new LogGroup (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-logs\\lib\\log-group.js:191:26)",
+              "AwsLogDriver.bind (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs\\lib\\log-drivers\\aws-log-driver.js:27:48)",
+              "new ContainerDefinition (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs\\lib\\container-definition.js:78:50)",
+              "FargateTaskDefinition.addContainer (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.js:159:16)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.js:36:51)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/EcsFargateStack/OneClickFargateService/TaskDef/ExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OneClickFargateServiceTaskDefExecutionRole56AACADD",
+            "trace": [
+              "new Role (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:35:22)",
+              "FargateTaskDefinition.obtainExecutionRole (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.js:200:35)",
+              "EcrImage.bind (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs\\lib\\images\\ecr.js:18:70)",
+              "new ContainerDefinition (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs\\lib\\container-definition.js:76:40)",
+              "FargateTaskDefinition.addContainer (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.js:159:16)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.js:36:51)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/EcsFargateStack/OneClickFargateService/TaskDef/ExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OneClickFargateServiceTaskDefExecutionRoleDefaultPolicy2FF5E2DE",
+            "trace": [
+              "new Policy (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.js:30:26)",
+              "Role.addToPolicy (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:153:34)",
+              "Function.addToPrincipal (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.js:57:65)",
+              "Function.addToPrincipalOrResource (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.js:31:30)",
+              "Import.grant (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecr\\lib\\repository.js:116:26)",
+              "Import.grantPull (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecr\\lib\\repository.js:128:26)",
+              "EcrImage.bind (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs\\lib\\images\\ecr.js:18:25)",
+              "new ContainerDefinition (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs\\lib\\container-definition.js:76:40)",
+              "FargateTaskDefinition.addContainer (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.js:159:16)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.js:36:51)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/EcsFargateStack/OneClickFargateService/Service/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OneClickFargateServiceC64CDCA7",
+            "trace": [
+              "new BaseService (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\base-service.js:110:25)",
+              "new FargateService (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs\\lib\\fargate\\fargate-service.js:35:9)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.js:49:24)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/EcsFargateStack/OneClickFargateService/Service/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OneClickFargateServiceSecurityGroup4129FCBF",
+            "trace": [
+              "new SecurityGroup (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.js:144:30)",
+              "FargateService.configureAwsVpcNetworking (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\base-service.js:338:29)",
+              "new FargateService (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs\\lib\\fargate\\fargate-service.js:46:14)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.js:49:24)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/EcsFargateStack/OneClickFargateService/Service/SecurityGroup/from EcsFargateStackOneClickFargateServiceLBSecurityGroup11C53902:{IndirectPort}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OneClickFargateServiceSecurityGroupfromEcsFargateStackOneClickFargateServiceLBSecurityGroup11C53902IndirectPort4F9BB6BE",
+            "trace": [
+              "SecurityGroup.addIngressRule (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.js:33:13)",
+              "SecurityGroup.addIngressRule (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.js:190:19)",
+              "other.connections._securityGroupRules.forEachAndForever.rule (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:89:31)",
+              "ReactiveList.forEachAndForever (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:191:13)",
+              "_securityGroups.forEachAndForever.securityGroup (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:88:51)",
+              "ReactiveList.forEachAndForever (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:191:13)",
+              "Connections.allowFrom (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:87:30)",
+              "ApplicationListener.registerConnectable (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-listener.js:212:33)",
+              "ApplicationTargetGroup.registerConnectable (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-target-group.js:75:22)",
+              "Object.attachToApplicationTargetGroup (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\base-service.js:185:29)",
+              "FargateService.attachToApplicationTargetGroup (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\base-service.js:152:47)",
+              "ApplicationTargetGroup.addTarget (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-target-group.js:52:35)",
+              "ApplicationLoadBalancedFargateService.addServiceAsTarget (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.js:90:26)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-kernel-d8emOQ\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.js:62:14)",
+              "obj._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7236:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\TridibB\\AppData\\Local\\Temp\\jsii-java-runtime7785858051485705160\\jsii-runtime.js:7239:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/cx-api": "1.20.0",
+      "@aws-cdk/core": "1.20.0",
+      "@aws-cdk/region-info": "1.20.0",
+      "@aws-cdk/aws-iam": "1.20.0",
+      "@aws-cdk/aws-events": "1.20.0",
+      "@aws-cdk/aws-codecommit": "1.20.0",
+      "@aws-cdk/aws-ecr": "1.20.0",
+      "@aws-cdk/assets": "1.20.0",
+      "@aws-cdk/aws-cloudwatch": "1.20.0",
+      "@aws-cdk/aws-kms": "1.20.0",
+      "@aws-cdk/aws-ssm": "1.20.0",
+      "@aws-cdk/aws-ec2": "1.20.0",
+      "@aws-cdk/aws-logs": "1.20.0",
+      "@aws-cdk/aws-s3": "1.20.0",
+      "@aws-cdk/aws-s3-assets": "1.20.0",
+      "@aws-cdk/aws-sqs": "1.20.0",
+      "@aws-cdk/aws-lambda": "1.20.0",
+      "@aws-cdk/aws-sns": "1.20.0",
+      "@aws-cdk/aws-cloudformation": "1.20.0",
+      "@aws-cdk/aws-ecr-assets": "1.20.0",
+      "@aws-cdk/aws-sam": "1.20.0",
+      "@aws-cdk/aws-secretsmanager": "1.20.0",
+      "@aws-cdk/aws-codebuild": "1.20.0",
+      "@aws-cdk/aws-codepipeline": "1.20.0",
+      "@aws-cdk/aws-autoscaling-common": "1.20.0",
+      "@aws-cdk/aws-elasticloadbalancing": "1.20.0",
+      "@aws-cdk/aws-route53": "1.20.0",
+      "@aws-cdk/aws-certificatemanager": "1.20.0",
+      "@aws-cdk/aws-elasticloadbalancingv2": "1.20.0",
+      "@aws-cdk/aws-autoscaling": "1.20.0",
+      "@aws-cdk/aws-codedeploy": "1.20.0",
+      "@aws-cdk/aws-applicationautoscaling": "1.20.0",
+      "@aws-cdk/aws-sns-subscriptions": "1.20.0",
+      "@aws-cdk/aws-autoscaling-hooktargets": "1.20.0",
+      "@aws-cdk/aws-apigateway": "1.20.0",
+      "@aws-cdk/aws-cloudfront": "1.20.0",
+      "@aws-cdk/aws-route53-targets": "1.20.0",
+      "@aws-cdk/aws-servicediscovery": "1.20.0",
+      "@aws-cdk/aws-ecs": "1.20.0",
+      "@aws-cdk/aws-stepfunctions": "1.20.0",
+      "@aws-cdk/aws-events-targets": "1.20.0",
+      "@aws-cdk/aws-codepipeline-actions": "1.20.0",
+      "@aws-cdk/aws-ecs-patterns": "1.20.0",
+      "jsii-runtime": "Java/1.8.0_92"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+<archetype-descriptor
+	xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
+	xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="mcrsvc-archetype">
+
+	<fileSets>
+		<fileSet filtered="true" packaged="true" encoding="UTF-8">
+			<directory>src/main/java</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="false" encoding="UTF-8">
+			<directory>src/main/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+				<!--<include>**/*.wsdl</include>
+				<include>**/*.xsd</include>-->
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="false" encoding="UTF-8">
+			<directory/>
+			<includes>
+				<!--<include>**/*.xml</include>
+				<include>**/*.yml</include>
+				<include>**/*.json</include>
+				<include>**/*.bat</include>-->
+				<include>**/*.xml</include>
+				<include>**/Dockerfile</include>
+				<include>**/*.yml</include>
+			</includes>
+		</fileSet>
+	</fileSets>
+
+	<requiredProperties>
+		<requiredProperty key="service" />
+		<requiredProperty key="resource" />
+		<requiredProperty key="dockerimagename" />
+		<requiredProperty key="restpath" />
+		<requiredProperty key="awsregion" />
+		<requiredProperty key="awsaccountid" />
+		<requiredProperty key="imgversion">
+			<defaultValue>latest</defaultValue>
+		</requiredProperty>
+		<!-- default username and password are my@username and my@password-->
+		<requiredProperty key="git-username">
+			<defaultValue>my%40username</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="git-pwd">
+			<defaultValue>my%40password</defaultValue>
+		</requiredProperty>
+	</requiredProperties>
+
+</archetype-descriptor>

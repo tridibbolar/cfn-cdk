@@ -1,0 +1,480 @@
+{
+  "Parameters": {
+    "ecrrepositoryname": {
+      "Type": "String",
+      "Description": "Name of the ecr repository that can be passed in at deploy-time."
+    },
+    "imagetag": {
+      "Type": "String",
+      "Description": "ecr image tag"
+    },
+    "containerport": {
+      "Type": "Number",
+      "Description": "Container port"
+    }
+  },
+  "Resources": {
+    "OneClickClusterFC5EC522": {
+      "Type": "AWS::ECS::Cluster",
+      "Metadata": {
+        "aws:cdk:path": "EcsFargateStack/OneClickCluster/Resource"
+      }
+    },
+    "OneClickFargateServiceLB4F11BF53": {
+      "Type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+      "Properties": {
+        "Scheme": "internet-facing",
+        "SecurityGroups": [
+          {
+            "Fn::GetAtt": [
+              "OneClickFargateServiceLBSecurityGroup457CCE32",
+              "GroupId"
+            ]
+          }
+        ],
+        "Subnets": [
+          "subnet-038b301efad4d049d",
+          "subnet-0bbaff1616101e7be"
+        ],
+        "Type": "application"
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsFargateStack/OneClickFargateService/LB/Resource"
+      }
+    },
+    "OneClickFargateServiceLBSecurityGroup457CCE32": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "Automatically created Security Group for ELB EcsFargateStackOneClickFargateServiceLB39AA9342",
+        "SecurityGroupIngress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow from anyone on port 80",
+            "FromPort": 80,
+            "IpProtocol": "tcp",
+            "ToPort": 80
+          }
+        ],
+        "VpcId": "vpc-07a9ba3b47f2c734c"
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsFargateStack/OneClickFargateService/LB/SecurityGroup/Resource"
+      }
+    },
+    "OneClickFargateServiceLBSecurityGrouptoEcsFargateStackOneClickFargateServiceSecurityGroupFBCDA5AFIndirectPort7F3C8953": {
+      "Type": "AWS::EC2::SecurityGroupEgress",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "OneClickFargateServiceLBSecurityGroup457CCE32",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "Description": "Load balancer to target",
+        "DestinationSecurityGroupId": {
+          "Fn::GetAtt": [
+            "OneClickFargateServiceSecurityGroup4129FCBF",
+            "GroupId"
+          ]
+        },
+        "FromPort": {
+          "Ref": "containerport"
+        },
+        "ToPort": {
+          "Ref": "containerport"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsFargateStack/OneClickFargateService/LB/SecurityGroup/to EcsFargateStackOneClickFargateServiceSecurityGroupFBCDA5AF:{IndirectPort}"
+      }
+    },
+    "OneClickFargateServiceLBPublicListenerC45F3B7C": {
+      "Type": "AWS::ElasticLoadBalancingV2::Listener",
+      "Properties": {
+        "DefaultActions": [
+          {
+            "TargetGroupArn": {
+              "Ref": "OneClickFargateServiceLBPublicListenerECSGroup28464895"
+            },
+            "Type": "forward"
+          }
+        ],
+        "LoadBalancerArn": {
+          "Ref": "OneClickFargateServiceLB4F11BF53"
+        },
+        "Port": 80,
+        "Protocol": "HTTP"
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsFargateStack/OneClickFargateService/LB/PublicListener/Resource"
+      }
+    },
+    "OneClickFargateServiceLBPublicListenerECSGroup28464895": {
+      "Type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+      "Properties": {
+        "Port": 80,
+        "Protocol": "HTTP",
+        "TargetType": "ip",
+        "VpcId": "vpc-07a9ba3b47f2c734c"
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsFargateStack/OneClickFargateService/LB/PublicListener/ECSGroup/Resource"
+      }
+    },
+    "OneClickFargateServiceTaskDefTaskRole9CC3D8ED": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "ecs-tasks.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsFargateStack/OneClickFargateService/TaskDef/TaskRole/Resource"
+      }
+    },
+    "OneClickFargateServiceTaskDef6C9E6397": {
+      "Type": "AWS::ECS::TaskDefinition",
+      "Properties": {
+        "ContainerDefinitions": [
+          {
+            "Essential": true,
+            "Image": {
+              "Fn::Join": [
+                "",
+                [
+                  {
+                    "Fn::Select": [
+                      4,
+                      {
+                        "Fn::Split": [
+                          ":",
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":ecr:ap-southeast-1:086272791573:repository/",
+                                {
+                                  "Ref": "ecrrepositoryname"
+                                }
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  ".dkr.ecr.",
+                  {
+                    "Fn::Select": [
+                      3,
+                      {
+                        "Fn::Split": [
+                          ":",
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":ecr:ap-southeast-1:086272791573:repository/",
+                                {
+                                  "Ref": "ecrrepositoryname"
+                                }
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  ".",
+                  {
+                    "Ref": "AWS::URLSuffix"
+                  },
+                  "/",
+                  {
+                    "Ref": "ecrrepositoryname"
+                  },
+                  ":",
+                  {
+                    "Ref": "imagetag"
+                  }
+                ]
+              ]
+            },
+            "LogConfiguration": {
+              "LogDriver": "awslogs",
+              "Options": {
+                "awslogs-group": {
+                  "Ref": "OneClickFargateServiceTaskDefc1LogGroupD57C432A"
+                },
+                "awslogs-stream-prefix": "OneClickFargateService",
+                "awslogs-region": "ap-southeast-1"
+              }
+            },
+            "Name": "c1",
+            "PortMappings": [
+              {
+                "ContainerPort": {
+                  "Ref": "containerport"
+                },
+                "Protocol": "tcp"
+              }
+            ]
+          }
+        ],
+        "Cpu": "512",
+        "ExecutionRoleArn": {
+          "Fn::GetAtt": [
+            "OneClickFargateServiceTaskDefExecutionRole56AACADD",
+            "Arn"
+          ]
+        },
+        "Family": "EcsFargateStackOneClickFargateServiceTaskDef4E62099A",
+        "Memory": "2048",
+        "NetworkMode": "awsvpc",
+        "RequiresCompatibilities": [
+          "FARGATE"
+        ],
+        "TaskRoleArn": {
+          "Fn::GetAtt": [
+            "OneClickFargateServiceTaskDefTaskRole9CC3D8ED",
+            "Arn"
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsFargateStack/OneClickFargateService/TaskDef/Resource"
+      }
+    },
+    "OneClickFargateServiceTaskDefc1LogGroupD57C432A": {
+      "Type": "AWS::Logs::LogGroup",
+      "UpdateReplacePolicy": "Retain",
+      "DeletionPolicy": "Retain",
+      "Metadata": {
+        "aws:cdk:path": "EcsFargateStack/OneClickFargateService/TaskDef/c1/LogGroup/Resource"
+      }
+    },
+    "OneClickFargateServiceTaskDefExecutionRole56AACADD": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "ecs-tasks.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsFargateStack/OneClickFargateService/TaskDef/ExecutionRole/Resource"
+      }
+    },
+    "OneClickFargateServiceTaskDefExecutionRoleDefaultPolicy2FF5E2DE": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "ecr:BatchCheckLayerAvailability",
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:BatchGetImage"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:",
+                    {
+                      "Ref": "AWS::Partition"
+                    },
+                    ":ecr:ap-southeast-1:086272791573:repository/",
+                    {
+                      "Ref": "ecrrepositoryname"
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "Action": "ecr:GetAuthorizationToken",
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Action": [
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "OneClickFargateServiceTaskDefc1LogGroupD57C432A",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "OneClickFargateServiceTaskDefExecutionRoleDefaultPolicy2FF5E2DE",
+        "Roles": [
+          {
+            "Ref": "OneClickFargateServiceTaskDefExecutionRole56AACADD"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsFargateStack/OneClickFargateService/TaskDef/ExecutionRole/DefaultPolicy/Resource"
+      }
+    },
+    "OneClickFargateServiceC64CDCA7": {
+      "Type": "AWS::ECS::Service",
+      "Properties": {
+        "Cluster": {
+          "Ref": "OneClickClusterFC5EC522"
+        },
+        "DeploymentConfiguration": {
+          "MaximumPercent": 200,
+          "MinimumHealthyPercent": 50
+        },
+        "DesiredCount": 6,
+        "EnableECSManagedTags": false,
+        "HealthCheckGracePeriodSeconds": 60,
+        "LaunchType": "FARGATE",
+        "LoadBalancers": [
+          {
+            "ContainerName": "c1",
+            "ContainerPort": {
+              "Ref": "containerport"
+            },
+            "TargetGroupArn": {
+              "Ref": "OneClickFargateServiceLBPublicListenerECSGroup28464895"
+            }
+          }
+        ],
+        "NetworkConfiguration": {
+          "AwsvpcConfiguration": {
+            "AssignPublicIp": "DISABLED",
+            "SecurityGroups": [
+              {
+                "Fn::GetAtt": [
+                  "OneClickFargateServiceSecurityGroup4129FCBF",
+                  "GroupId"
+                ]
+              }
+            ],
+            "Subnets": [
+              "subnet-025cda44c4e43cc38",
+              "subnet-0287f053528f1bc2b"
+            ]
+          }
+        },
+        "TaskDefinition": {
+          "Ref": "OneClickFargateServiceTaskDef6C9E6397"
+        }
+      },
+      "DependsOn": [
+        "OneClickFargateServiceLBPublicListenerECSGroup28464895",
+        "OneClickFargateServiceLBPublicListenerC45F3B7C"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "EcsFargateStack/OneClickFargateService/Service/Service"
+      }
+    },
+    "OneClickFargateServiceSecurityGroup4129FCBF": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "EcsFargateStack/OneClickFargateService/Service/SecurityGroup",
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1"
+          }
+        ],
+        "VpcId": "vpc-07a9ba3b47f2c734c"
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsFargateStack/OneClickFargateService/Service/SecurityGroup/Resource"
+      }
+    },
+    "OneClickFargateServiceSecurityGroupfromEcsFargateStackOneClickFargateServiceLBSecurityGroup11C53902IndirectPort4F9BB6BE": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "Properties": {
+        "IpProtocol": "tcp",
+        "Description": "Load balancer to target",
+        "FromPort": {
+          "Ref": "containerport"
+        },
+        "GroupId": {
+          "Fn::GetAtt": [
+            "OneClickFargateServiceSecurityGroup4129FCBF",
+            "GroupId"
+          ]
+        },
+        "SourceSecurityGroupId": {
+          "Fn::GetAtt": [
+            "OneClickFargateServiceLBSecurityGroup457CCE32",
+            "GroupId"
+          ]
+        },
+        "ToPort": {
+          "Ref": "containerport"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsFargateStack/OneClickFargateService/Service/SecurityGroup/from EcsFargateStackOneClickFargateServiceLBSecurityGroup11C53902:{IndirectPort}"
+      }
+    }
+  },
+  "Outputs": {
+    "OneClickFargateServiceLoadBalancerDNSA542973D": {
+      "Value": {
+        "Fn::GetAtt": [
+          "OneClickFargateServiceLB4F11BF53",
+          "DNSName"
+        ]
+      }
+    },
+    "OneClickFargateServiceServiceURL73DE1C7E": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "http://",
+            {
+              "Fn::GetAtt": [
+                "OneClickFargateServiceLB4F11BF53",
+                "DNSName"
+              ]
+            }
+          ]
+        ]
+      }
+    }
+  }
+}

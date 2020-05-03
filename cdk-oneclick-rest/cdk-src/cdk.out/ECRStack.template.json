@@ -1,0 +1,97 @@
+{
+  "Parameters": {
+    "ecrrepositoryname": {
+      "Type": "String",
+      "Description": "Name of the ecr repository that can be passed in at deploy-time."
+    }
+  },
+  "Resources": {
+    "ecrrepository892B51BD": {
+      "Type": "AWS::ECR::Repository",
+      "Properties": {
+        "RepositoryName": {
+          "Ref": "ecrrepositoryname"
+        }
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "ECRStack/ecr-repository/Resource"
+      }
+    }
+  },
+  "Outputs": {
+    "repositoryname": {
+      "Value": {
+        "Ref": "ecrrepository892B51BD"
+      },
+      "Export": {
+        "Name": "ecr-repository-name"
+      }
+    },
+    "repositoryarn": {
+      "Value": {
+        "Fn::GetAtt": [
+          "ecrrepository892B51BD",
+          "Arn"
+        ]
+      },
+      "Export": {
+        "Name": "ecr-repository-arn"
+      }
+    },
+    "repositoryuri": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            {
+              "Fn::Select": [
+                4,
+                {
+                  "Fn::Split": [
+                    ":",
+                    {
+                      "Fn::GetAtt": [
+                        "ecrrepository892B51BD",
+                        "Arn"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            ".dkr.ecr.",
+            {
+              "Fn::Select": [
+                3,
+                {
+                  "Fn::Split": [
+                    ":",
+                    {
+                      "Fn::GetAtt": [
+                        "ecrrepository892B51BD",
+                        "Arn"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            ".",
+            {
+              "Ref": "AWS::URLSuffix"
+            },
+            "/",
+            {
+              "Ref": "ecrrepository892B51BD"
+            }
+          ]
+        ]
+      },
+      "Export": {
+        "Name": "ecr-repository-uri"
+      }
+    }
+  }
+}

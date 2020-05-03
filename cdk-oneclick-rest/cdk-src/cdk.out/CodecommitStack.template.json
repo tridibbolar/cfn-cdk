@@ -1,0 +1,46 @@
+{
+  "Parameters": {
+    "coderepositoryname": {
+      "Type": "String",
+      "Description": "Name of the code repository that can be passed in at deploy-time."
+    }
+  },
+  "Resources": {
+    "coderepository5B01BE4B": {
+      "Type": "AWS::CodeCommit::Repository",
+      "Properties": {
+        "RepositoryName": {
+          "Ref": "coderepositoryname"
+        },
+        "RepositoryDescription": "This repository contains SpringBoot service code"
+      },
+      "Metadata": {
+        "aws:cdk:path": "CodecommitStack/code-repository/Resource"
+      }
+    }
+  },
+  "Outputs": {
+    "HttpUrl": {
+      "Value": {
+        "Fn::GetAtt": [
+          "coderepository5B01BE4B",
+          "CloneUrlHttp"
+        ]
+      },
+      "Export": {
+        "Name": "HttpUrl"
+      }
+    },
+    "SshUrl": {
+      "Value": {
+        "Fn::GetAtt": [
+          "coderepository5B01BE4B",
+          "CloneUrlSsh"
+        ]
+      },
+      "Export": {
+        "Name": "SshUrl"
+      }
+    }
+  }
+}
